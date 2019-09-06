@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css" />
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+		<style>
+      .vertical-center {
+        min-height: 100vh; 
+        display: flex;
+        align-items: center;
+      }
+
+			#info {
+				font-family: 'Comfortaa', cursive;
+			}
+    
+			.form {
+        max-height: 0vh;
+        overflow: hidden;
+        transition: all 2s;
+			}
+
+      #info:hover > .form { 
+        max-height: 100vh;
+        transition: all 2s;
+      }
+
+			#about {
+				font-family: 'Comfortaa', cursive;
+			}
+
+      .pos-f-t {
+      }
+
+      #output {
+        max-height: 100vh;
+        margin-bottom: 5vh;
+        display: hidden;
+        text-align: center;
+      }
+
+		</style>
+	</head>
+	<body class="bg-dark" id="top">
+
+		<div class="pos-f-t">
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div style="width: 10vw;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button><br />
+				<div class="collapse" id="navbarToggleExternalContent" style="float: left;">
+					<div class="bg-dark p-4 ">
+						<h4 class="align-left nav-item"><a class="text-white" href="#top">top</a></h4>
+						<span><a class="text-white" href="#about">about</a></span><br/>
+						<span><a class="text-white" href="#columns">results</a></span><br/>
+						<span><a id="mute" class="text-white" href="#">mute</a></span>
+					</div>
+				</div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="vertical-center">
+      <div class="container text-light" id="info">
+        <div class="row justify-content-center">
+          <h1 style="font-size: 7em">Mood</h1>
+        </div>
+
+          <div class="form" id="frm">
+            <div class="form-group row justify-content-center">
+              <div class="col-sm-4">
+                <label for="sel1">Search by:</label>
+                <select class="form-control" id="sel1">
+                  <option value="artist">Artist</option>
+                  <option value="track">Song</option>
+                </select>
+                <label class="col-form-label" style="text-align: right;">Search:</label>
+                <input name="search" type="text" id="input" class="form-control"></input>
+                <div style="padding-top: 15px;"><input type="submit" class="btn btn-primary" id="submit" value="Submit"></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <h1 style="font-size: 7em">Music</h1>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row" id="columns">
+      </div>
+
+		<div class="container" id="output">
+    </div>
+
+		<div class="container text-light bg-secondary" style="min-width: 100vw" name="about" id="about">
+			<div class="row justify-content-center">
+				<h1 style="font-size: 7em; margin-top: 3%;">About</h1>
+				<div class="container" id="cards">
+          <div style="margin: 5%;">
+            <h2>Synesthesia is a peculiar medical condition that combines senses together.</h2><br/>
+            
+            A person may:<br/>
+            <ul>
+              <li>Hear a sound and see a color</li>
+              <li>Smell something and hear a sound</li>
+              <li>See a word and taste a flavor</li>
+            </ul>
+            This project is meant to be a representation of what Synthesia might look like to those who have it.<br/>
+            <ol> 
+                <li>Enter a song or playlist</li>
+                <li>We calculate a color for each song</li>
+                <li>Visualize your data!</li>
+            </ol>
+            This project uses an express backend, bootstrap frontend, and the Spotify api.<br/><br>
+            <strong><em><a style="color: #444" href="https://github.com/iyves/mood-music" target="_blank" rel="noopener">Click here to see the github repository for this project.</a></em></strong>
+          </div>
+					<div class="row">
+						<div class="col-md">
+							<div class="card text-dark">
+								<div class="card-body">
+                  <h2 class="card-title">Steven Borrego</h2>
+                  <hr/> 
+                  <p>A computer science major at Portland State University.</p>
+                  <p>I enjoy classic film and literature, guitar/bass/drums/keyboards, audio engineering, LP collecting, cycling, and technology.</p>
+                  <p>
+                    <a style="color: #555;" href="https://www.linkedin.com/in/steven-borrego-b60107181/" target="_blank" rel="noopener">linkedin</a>&emsp;
+                      <a style="color: #555;" href="https://github.com/stevengborrego" target="_blank" rel="noopener">github</a>
+                  </p>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md">
+								<div class="card text-dark">
+									<div class="card-body">
+										<h2 class="card-title">Yves Wienecke</h2>
+                    <hr/> 
+										<p>A dedicated third year student pursuing a double major in computer science and Russian at Portland State University looking for industry experience in software engineering.</p>
+                    <p>Study abroad in Korea and Kazakhstan adapt me to excel in foreign situations and cooperate with diverse backgrounds.</p>
+                    <p>I am detail oriented, self-motivated, and an empathetic leader with strong soft skills and a passion for being an active member in my community.</p>
+                    <p>
+                      <a style="color: #555;" href="https://www.linkedin.com/in/yves-wienecke/" target="_blank" rel="noopener">linkedin</a>&emsp;
+                      <a style="color: #555;" href="https://github.com/iyves" target="_blank" rel="noopener">github</a>
+                    </p>
+									</div>
+							</div>
+						</div>
+					</div>
+					</div>
+			</div>
+      <br/><br/><br/>
+		</div>
+	</body>
+
+	<script>
+    var muted = false;
+    var scrollOver = false;
+    var currSlide = 1;
+    var maxSlide = 0;
+
+    var results = false;
+    
+    var changeSlide = function(index) {
+      $('.colorSlide:nth-child(' + currSlide +')').css('display', 'none');
+      if ($('.colorSlide:nth-child(' + currSlide +') audio').attr('src') != 'null')
+        $('.colorSlide:nth-child(' + currSlide +') audio')[0].pause();
+      currSlide = index;
+      if (currSlide > maxSlide){
+        currSlide = 1;
+      }
+      $('.colorSlide:nth-child(' + currSlide +')').css('display', 'block');
+      if (!muted && $('.colorSlide:nth-child(' + currSlide +') audio').attr('src') != 'null')
+        $('.colorSlide:nth-child(' + currSlide +') audio')[0].play();
+    }
+
+    setInterval(function(){
+      if (!scrollOver)
+        changeSlide(currSlide +1)
+    }, 5000); 
+
+    $('#mute').click(function(e) {
+      muted = !muted;
+      if ($('.colorSlide:nth-child(' + currSlide +') audio').attr('src') != 'null') {
+        if (muted)
+        {
+          $('.colorSlide:nth-child(' + currSlide +') audio')[0].pause();
+        } else { 
+          $('.colorSlide:nth-child(' + currSlide +') audio')[0].play();
+        }
+      }
+      e.preventDefault(); 
+    });
+    var showResult = function(data) {
+        console.log(data);
+        $('#output').html('');
+        maxSlide = data.length;
+        currSlide = 1;  
+        results = true;
+
+        var o = '';
+          for (var i = 0; i < maxSlide; i +=1) {
+            o += '<div class="colorSlide" style="margin: 0 auto; position: relative; text-align: center;';
+            o += 'border-style: solid; border-width: 10%; border-color: #333333; border-radius: 2%;';
+            o += 'display: none; height: 50vh; width: 50%; overflow: hidden;';
+            o += 'background-color: hsl('
+              + data[i].color['h'] + ', '
+              + data[i].color['s'] + '%, '
+              + data[i].color['l'] + '%'
+              + ')">'; 
+              o += '<div class="colorCaption" ';
+              o += 'style="background-color: #404040;';
+				      o += "font-family: 'Comfortaa', cursive;";
+              o += 'width: 100%; padding: 2%;';
+              o += 'position: absolute; bottom: 0;">';
+                  o += '<h2 style="text-align: center; color: #DEDEDE;">';
+                  o += '<a target="_blank" rel="noopener" href="' + data[i].url + '" style="color: #DEDEDE;">';
+                  o += data[i].name + '</a><hr/></h2>';
+                  o += '<div style="width:100%; display: flex; flex-direction: row; justify-content: center;">';
+                    o += '<div style="margin-right: 5%;">'; 
+                      o+= '<img style="border-radius: 3%;" src="' + data[i].image + '"/>';
+                    o += '</div>'; 
+                    o += '<div style="text-align: left;">'; 
+                      o += '<p style="color: #999;">';
+                        o += 'Album:&nbsp;&emsp;&emsp;&emsp;' + data[i].album;
+                        o += '<br/>Artists:&nbsp;&emsp;&emsp;&emsp;' + data[i].artists.join(', ');
+                        o += '<br/>Popularity:&nbsp;&emsp;' + data[i].popularity;
+                      o+= '</p>';
+                    o += '</div>'; 
+                  o+= '</div>';
+                  o += '<audio preload="auto" src="' + data[i].sound + '"></audio>';
+            o += '</div></div>';
+          }
+        $('#output').html(o);
+        $('.colorSlide:nth-child(1)').css('display', 'block');
+        if (!muted && $('.colorSlide:nth-child(' + currSlide +') audio').attr('src') != 'null')
+          $('.colorSlide:nth-child(1) audio')[0].play();
+        
+        var c ='';
+        for(var i = 0; i < data.length; i += 1) {
+          c += '<div class="col-sm resultColumn" style="background-color: hsl('
+            + data[i].color['h'] + ','
+            + data[i].color['s'] + '%, '
+            + data[i].color['l'] + '%'
+            + ')"></div>';
+        }
+       $('#columns').html(c);
+       $('#columns').css("min-height", "50vw").css("min-width", "100vw").css("margin-bottom", "5vh");
+       $('#output').css("min-height", "20vw").css("min-width", "30vw");
+       $('#columns').css('display', 'float');
+       $('#output').css("display", 'float');
+        
+        $('.resultColumn').hover(function(e) {
+          scrollOver = true;
+          var num = $('.resultColumn').index(this) + 1;
+          changeSlide(num);
+        }, function() { scrollOver = false; });
+      };
+
+    var noResult = function(data) {
+        console.log('no results');
+
+        $('#columns').css("min-height", "50vw").css("min-width", "100vw").css("margin-bottom", "5vh").css("background-color", "rgb(217,83,79)");
+        $('#columns').html('<div class="container text-light" id="info"><div class="row justify-content-center" style="margin-top: 20vh"><h1 style="font-size: 5em">No Results</h1></div>');
+        $('#columns').css('display', 'float');
+        $('#output').html('');
+        return;
+    };
+
+		$('#submit').on('click', function(event){
+      console.log("in click event");
+			$.ajax({
+        'url' : '/submit',
+				'type': 'POST',
+				'data':  {option: $('#sel1').val(), input: $('#input').val() },
+        'success': showResult,
+        'error': noResult
+        });
+
+        if(results === false) {
+          noResult();
+        }
+        results = false;
+    });
+
+    $('#input').on('keyup', function(event){
+      console.log('in keyup event');
+      if(event.which === 13){
+        $('#submit').click();
+      }
+    });
+	</script>
+</html>

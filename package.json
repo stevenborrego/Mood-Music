@@ -1,0 +1,22 @@
+{
+  "name": "mood-music",
+  "version": "1.0.0",
+  "description": "Yves Wienecke<Br/> Steven Borrego",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyves/mood-music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iyves/mood-music/issues"
+  },
+  "homepage": "https://github.com/iyves/mood-music#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
